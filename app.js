@@ -5,6 +5,7 @@ const app = express();
 
 const certifRouters = require("./routers/certification");
 const homeRouter = require("./routers/home");
+const errorRouter = require("./routers/error");
 
 app.set("view engine", ".ejs");
 app.set("views", path.join(__dirname, "templates"));
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", certifRouters);
-app.use("*", homeRouter);
+app.use("", homeRouter);
+app.use("*", errorRouter);
 
 module.exports = app;
