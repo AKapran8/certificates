@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./utils/head.ejs"); %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <%- include("./utils/navbar.ejs"); %>
+        <div class="col py-3">
+          <div class="d-flex align-items-center justify-content-center">
+            <div class="error-page text-center">
+              <h1 class="display-4">Oops! Page not found</h1>
+              <p class="lead">
+                It seems like the page you are looking for doesn't exist or the
+                URL you entered is incorrect.
+              </p>
+              <p>
+                Please choose a certificate from the left navigation sidebar to
+                continue browsing our collection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
