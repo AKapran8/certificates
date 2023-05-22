@@ -1,7 +1,7 @@
 {
-  "name": "andrii_kapran_cv",
+  "name": "andrii_kapran_certificates",
   "version": "1.0.0",
-  "description": "This my project with all certifications and my CV",
+  "description": "This my project with all certificates",
   "main": "index.js",
   "scripts": {
     "serve": "nodemon server.js",
