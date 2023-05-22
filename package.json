@@ -2,7 +2,7 @@
   "name": "andrii_kapran_certificates",
   "version": "1.0.0",
   "description": "This my project with all certificates",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "serve": "nodemon server.js",
     "start": "node server.js",
