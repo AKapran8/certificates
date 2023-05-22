@@ -24,7 +24,7 @@ const getLogos = async (req, res, next) => {
   const data = {
     place: "Logos IT Academy",
     title: "Frontend Development",
-    educationPeriod: "07.2020 - 04.2021",
+    educationPeriod: "08.2020 - 04.2021",
     filePath: "/files/logos.pdf",
     key: "LOGOS",
     credentialID: "",
