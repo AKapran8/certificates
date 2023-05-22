@@ -1,0 +1,77 @@
+const getBootstrap = async (req, res, next) => {
+  const data = {
+    place: "Udemy",
+    title: "HTML, CSS, & Bootstrap - Certification Course for Beginners",
+    educationPeriod: "03.2021 - 04.2021",
+    filePath: "/files/HTML_CSS_BOOTSTRAP_UDEMY.pdf",
+    key: "BOOTSTRAP",
+    credentialID: "UC-0d266854-ce5a-4768-b112-4067930ac1cc",
+    dateOfReceiving: "04.2021",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+};
+
+const getLogos = async (req, res, next) => {
+  const data = {
+    place: "Logos IT Academy",
+    title: "Frontend Development",
+    educationPeriod: "07.2020 - 04.2021",
+    filePath: "/files/logos.pdf",
+    key: "LOGOS",
+    credentialID: "",
+    dateOfReceiving: "04.2021",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+};
+
+const getPolytechnic = async (req, res, next) => {
+  const data = {
+    place: "Lviv Polytechnic National University",
+    title: "Finance, Banking and Insuranse",
+    educationPeriod: "07.2018 - 06.2022",
+    filePath: "/files/Polytechnic.pdf",
+    key: "POLYTECHNIC",
+    credentialID: "B22 №028684",
+    dateOfReceiving: "06.2022",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+};
+
+const getA2Deutsch = async (req, res, next) => {
+  const data = {
+    place: "Austrian Integration Fund",
+    title: "ZEUGNIS ZUR  INTEGRATIONSPRÜFUNG SPRACHNIVEAU A2",
+    educationPeriod: "08.2022 - 03.2023",
+    filePath: "/files/deutschA2.pdf",
+    key: "DEUTSCH",
+    credentialID: "INTA2-02351482",
+    dateOfReceiving: "04.2023",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+};
+
+const getMEAN = async (req, res, next) => {
+  const data = {
+    place: "Udemy ( author: Maximilian Schwarzmuller)",
+    title: "Angular & NodeJS - The MEAN Stack Guide [2023 Edition]",
+    educationPeriod: "04.2023 - 05.2023",
+    filePath: "/files/mean.pdf",
+    key: "MEAN",
+    credentialID: "UC-03c03d17-5bd0-42bb-a9cc-6d0ff75de009",
+    dateOfReceiving: "05.2023",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+};
+
+module.exports = {
+  getMEAN,
+  getA2Deutsch,
+  getPolytechnic,
+  getLogos,
+  getBootstrap,
+};

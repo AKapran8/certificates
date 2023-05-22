@@ -1,1 +1,1 @@
-# This is repository with my certificates
+# This is repository for my certificates

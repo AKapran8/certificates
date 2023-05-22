@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-start">
+    <embed
+      src="<%= data.filePath %>"
+      width="520"
+			height="520"
+      type="application/pdf"
+    />
+
+    <div class="block mt-5 ms-4">
+      <h3><%= data.title %></h3>
+      <p>Place <strong><%= data.place %></strong></p>
+      <p>Education Period <strong> <%= data.educationPeriod %> </strong></p>
+      <p>Date of receiving <strong><%= data.dateOfReceiving %></strong></p>
+      <% if (data.credentialID) { %>
+      <p>Certificate ID <strong><%= data.credentialID %></strong></p>
+      <% }%> <% if (data.expiredDate) { %>
+      <p>Expired date <strong><%= data.expiredDate %></strong></p>
+      <% }%>
+    </div>
+  </div>
+</div>
