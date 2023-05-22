@@ -1,3 +1,11 @@
+// place: It's about the place where you was studied
+// title: Certificate name or about what you lerned
+// educationPeriod: Period when you studied
+// filePath: Required and must be the same with file name in folder files, to show certificate file
+// key: Is required and must be the same with key in middleware/navbar.js file
+// credentialID: If your certificate have unique ID please wite it
+// dateOfReceiving: When you was getting it
+// expiredDate: if current certificate have expiried date, please write it,
 const getBootstrap = async (req, res, next) => {
   const data = {
     place: "Udemy",

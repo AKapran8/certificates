@@ -7,6 +7,8 @@ const certifRouters = require("./routers/certification");
 const homeRouter = require("./routers/home");
 const errorRouter = require("./routers/error");
 
+const navbarDataMiddleware = require("./middleware/navbar");
+
 app.set("view engine", ".ejs");
 app.set("views", path.join(__dirname, "templates"));
 
@@ -24,8 +26,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", certifRouters);
-app.use("", homeRouter);
-app.use("*", errorRouter);
+app.use("/api", navbarDataMiddleware, certifRouters);
+app.use("", navbarDataMiddleware, homeRouter);
+app.use("*", navbarDataMiddleware, errorRouter);
 
 module.exports = app;
