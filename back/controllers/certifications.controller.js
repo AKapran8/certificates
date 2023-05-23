@@ -17,7 +17,9 @@ const getBootstrap = async (req, res, next) => {
     dateOfReceiving: "04.2021",
     expiredDate: "",
   };
-  res.render("index", { data });
+  // res.render("index", { data });
+
+  res.status(200).json({message: 'Success', data})
 };
 
 const getLogos = async (req, res, next) => {
