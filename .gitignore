@@ -4,9 +4,13 @@
 /out-tsc
 /bazel-out
 /package-lock.json
+/front/package-lock.json
+/back/package-lock.json
 
 # Node
 /node_modules
+/front/node_modules
+/back/node_modules
 npm-debug.log
 yarn-error.log
 
