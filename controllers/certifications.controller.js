@@ -54,7 +54,7 @@ const getA2Deutsch = async (req, res, next) => {
     title: "ZEUGNIS ZUR  INTEGRATIONSPRÜFUNG SPRACHNIVEAU A2",
     educationPeriod: "08.2022 - 03.2023",
     filePath: "/files/deutschA2.pdf",
-    key: "DEUTSCH",
+    key: "DEUTSCH-A2",
     credentialID: "INTA2-02351482",
     dateOfReceiving: "04.2023",
     expiredDate: "",
@@ -76,7 +76,34 @@ const getMEAN = async (req, res, next) => {
   res.render("index", { data });
 };
 
+const getB1Deutsch = async (req, res, next) => {
+  const data = {
+    place: "WIFI",
+    title: "Teilnahmebestätigung",
+    educationPeriod: "02.2023 - 05.2023",
+    filePath: "/files/Teilnahmebestätigung.pdf",
+    key: "DEUTSCH-B1",
+    dateOfReceiving: "05.2023",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+}
+const getCalculator = async (req, res, next) => {
+  const data = {
+    place: "Udemy (author: Shawn Foster)",
+    title: "React Projects - Build a Calculator",
+    filePath: "/files/React_Calculator.pdf",
+    key: "CALCULATOR",
+    credentialID: "UC-63060c30-d549-4fd9-b2da-33c67be3818",
+    dateOfReceiving: "06.2023",
+    expiredDate: "",
+  };
+  res.render("index", { data });
+}
+
 module.exports = {
+  getCalculator,
+  getB1Deutsch,
   getMEAN,
   getA2Deutsch,
   getPolytechnic,

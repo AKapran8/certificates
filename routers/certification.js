@@ -9,5 +9,7 @@ router.get("/logos", certifController.getLogos);
 router.get("/polytechnic", certifController.getPolytechnic);
 router.get("/deutsch-a2", certifController.getA2Deutsch);
 router.get("/mean", certifController.getMEAN);
+router.get("/deutsch-b1", certifController.getB1Deutsch);
+router.get("/calculator", certifController.getCalculator);
 
 module.exports = router;

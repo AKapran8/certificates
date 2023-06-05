@@ -3,8 +3,10 @@
 // Key must be equal to controllers/certifications.controller.js functions data key field
 // Text is how names certificate in left navbar
 const navbarlistData = [
+  { endpoint: "/api/calculator", key: "CALCULATOR", text: "React Projects - Build a Calculator" },
+  { endpoint: "/api/deutsch-b1", key: "DEUTSCH-B1", text: "Teilnahmebestätigung" },
   { endpoint: "/api/mean", key: "MEAN", text: "MEAN Course" },
-  { endpoint: "/api/deutsch-a2", key: "DEUTSCH", text: "Deutsch A2 PRÜFUNG" },
+  { endpoint: "/api/deutsch-a2", key: "DEUTSCH-A2", text: "Deutsch A2 PRÜFUNG" },
   {
     endpoint: "/api/polytechnic",
     key: "POLYTECHNIC",
