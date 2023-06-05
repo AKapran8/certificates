@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 const certificatesRouters = require("./routers/certification");
-
+ 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/files')));

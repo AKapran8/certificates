@@ -19,7 +19,7 @@ const certificationsListData = [
     credentialID: "UC-63060c30-d549-4fd9-b2da-33c67be3818",
     dateOfReceiving: "06.2023",
     expiredDate: "",
-    path: '/api/certificates/react-calculator'
+    path: 'certificates/react-calculator'
   },
   {
     organization: "WIFI",
@@ -30,7 +30,7 @@ const certificationsListData = [
     key: "GERMAN_B1",
     dateOfReceiving: "05.2023",
     expiredDate: "",
-    path: '/api/certificates/german-b1',
+    path: 'certificates/german-b1',
   },
   {
     organization: "Udemy (author: Maximilian Schwarzmuller)",
@@ -42,7 +42,7 @@ const certificationsListData = [
     credentialID: "UC-03c03d17-5bd0-42bb-a9cc-6d0ff75de009",
     dateOfReceiving: "05.2023",
     expiredDate: "",
-    path: '/api/certificates/mean',
+    path: 'certificates/mean',
   },
   {
     organization: "Austrian Integration Fund",
@@ -54,7 +54,7 @@ const certificationsListData = [
     credentialID: "INTA2-02351482",
     dateOfReceiving: "04.2023",
     expiredDate: "",
-    path: '/api/certificates/german-a2',
+    path: 'certificates/german-a2',
   },
   {
     organization: "Lviv Polytechnic National University",
@@ -66,7 +66,7 @@ const certificationsListData = [
     credentialID: "B22 №028684",
     dateOfReceiving: "06.2022",
     expiredDate: "",
-    path: '/api/certificates/polytechnic',
+    path: 'certificates/polytechnic',
   },
   {
     organization: "Logos IT Academy",
@@ -78,7 +78,7 @@ const certificationsListData = [
     credentialID: "",
     dateOfReceiving: "04.2021",
     expiredDate: "",
-    path: '/api/certificates/logos',
+    path: 'certificates/logos',
   },
   {
     organization: "Udemy (author: YouAccel Training)",
@@ -90,7 +90,7 @@ const certificationsListData = [
     credentialID: "UC-0d266854-ce5a-4768-b112-4067930ac1cc",
     dateOfReceiving: "04.2021",
     expiredDate: "",
-    path: '/api/certificates/bootstrap',
+    path: 'certificates/bootstrap',
   },
 ]
 
