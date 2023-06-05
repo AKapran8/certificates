@@ -1,14 +1,14 @@
 const { list } = require("./../data/certifications");
 
 const getCertificates = async (_, res) => {
-  res.send(list)
+  res.send(list);
 }
 const getCertificatesLinks = async (_, res) => {
   const navbarData = list.map(e => {
     return { endpoint: e.path, key: e.key, text: e.title }
   });
 
-  res.send(navbarData)
+  res.send(navbarData);
 }
 
 const getBootstrapCertificate = async (_, res) => {
