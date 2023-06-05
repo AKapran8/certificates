@@ -3,18 +3,15 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 
-const certifRouters = require("./routers/certification");
-const homeRouter = require("./routers/home");
-const errorRouter = require("./routers/error");
+const certificatesRouters = require("./back/routers/certification");
+const projectsRouters = require("./back/routers/projects");
+const CVRouters = require("./back/routers/cv");
 
-const navbarDataMiddleware = require("./middleware/navbar");
-
-app.set("view engine", ".ejs");
-app.set("views", path.join(__dirname, "templates"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/files", express.static(path.join("files")));
+app.use(express.static(__dirname + '/back/files'));
+app.use(express.static(__dirname + '/build'));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -26,15 +23,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", navbarDataMiddleware, certifRouters);
-app.use("/api/Andrii_Kapran_CV", async (_, res, next) => {
-  const data = {
-    title: "Andrii Kapran CV",
-    filePath: "/files/CV/Andrii_Kapran_CV.pdf",
-  };
-  res.render("cv", { data });
+app.use("/api/certificates", certificatesRouters)
+app.use("/api/projects", projectsRouters)
+app.use("/api/cv", CVRouters)
+app.use("*", async (_, res, next) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'));
 });
-app.use("", navbarDataMiddleware, homeRouter);
-app.use("*", navbarDataMiddleware, errorRouter);
 
 module.exports = app;

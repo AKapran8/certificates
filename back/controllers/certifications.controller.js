@@ -17,7 +17,9 @@ const getBootstrap = async (req, res, next) => {
     dateOfReceiving: "04.2021",
     expiredDate: "",
   };
-  res.render("index", { data });
+  // res.render("index", { data });
+
+  res.send('LOREM')
 };
 
 const getLogos = async (req, res, next) => {
