@@ -1,15 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-const certifController = require("../controllers/certifications.controller");
+const certificatesController = require("../controllers/certifications.controller");
 
-// Enpoint url with prexis "/api" must be equal to middleware/navbar.js navbarlistData endpoint
-router.get("/bootstrap", certifController.getBootstrap);
-router.get("/logos", certifController.getLogos);
-router.get("/polytechnic", certifController.getPolytechnic);
-router.get("/deutsch-a2", certifController.getA2Deutsch);
-router.get("/mean", certifController.getMEAN);
-router.get("/deutsch-b1", certifController.getB1Deutsch);
-router.get("/calculator", certifController.getCalculator);
+router.get("/", certificatesController.getCertificates);
+router.get("/navbar-list", certificatesController.getCertificatesLinks);
+
+router.get("/bootstrap", certificatesController.getBootstrapCertificate);
+router.get("/logos", certificatesController.getLogosCertificate);
+router.get("/polytechnic", certificatesController.getPolytechnicCertificate);
+router.get("/german-a2", certificatesController.getGermanA2Certificate);
+router.get("/mean", certificatesController.getMEANCertificate);
+router.get("/german-b1", certificatesController.getB1TeilnahmebestatigungCertificate);
+router.get("/react-calculator", certificatesController.getCalculatorCertificate);
 
 module.exports = router;

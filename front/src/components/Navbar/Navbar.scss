@@ -1,0 +1,16 @@
+.navbar {
+  width: 30vh;
+  max-width: 500px;
+  height: 100vh;
+  background-color: #292b2c;
+
+  &-container {
+    padding: 2rem;
+    color: #fff;
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
