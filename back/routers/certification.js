@@ -4,8 +4,6 @@ const router = express.Router();
 const certificatesController = require("../controllers/certifications.controller");
 
 router.get("/", certificatesController.getCertificates);
-router.get("/navbar-list", certificatesController.getCertificatesLinks);
-
 router.get("/bootstrap", certificatesController.getBootstrapCertificate);
 router.get("/logos", certificatesController.getLogosCertificate);
 router.get("/polytechnic", certificatesController.getPolytechnicCertificate);

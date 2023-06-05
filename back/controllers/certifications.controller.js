@@ -3,13 +3,6 @@ const { list } = require("./../data/certifications");
 const getCertificates = async (_, res) => {
   res.send(list);
 }
-const getCertificatesLinks = async (_, res) => {
-  const navbarData = list.map(e => {
-    return { endpoint: e.path, key: e.key, text: e.title }
-  });
-
-  res.send(navbarData);
-}
 
 const getBootstrapCertificate = async (_, res) => {
   const certificate = list.find(el => el.key === 'BOOTSTRAP');
@@ -54,7 +47,6 @@ const getCalculatorCertificate = async (_, res) => {
 
 module.exports = {
   getCertificates,
-  getCertificatesLinks,
   getBootstrapCertificate,
   getLogosCertificate,
   getPolytechnicCertificate,
