@@ -27,6 +27,13 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", navbarDataMiddleware, certifRouters);
+app.use("/api/Andrii_Kapran_CV", async (_, res, next) => {
+  const data = {
+    title: "Andrii Kapran CV",
+    filePath: "/files/CV/Andrii_Kapran_CV.pdf",
+  };
+  res.render("cv", { data });
+});
 app.use("", navbarDataMiddleware, homeRouter);
 app.use("*", navbarDataMiddleware, errorRouter);
 
