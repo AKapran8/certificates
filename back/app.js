@@ -4,11 +4,11 @@ const path = require("path");
 const app = express();
 
 const certificatesRouters = require("./routers/certification");
- 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '/files')));
-app.use(express.static(path.join(__dirname, '/..', "index.html")));
+app.use("/files", express.static(path.join(__dirname, "files")));
+app.use("/", express.static(path.join(__dirname, 'react')));
 
 app.use((_, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -21,8 +21,12 @@ app.use((_, res, next) => {
 });
 
 app.use("/api/certificates", certificatesRouters)
+app.use("/files/certificates/:fileName", (req, res) => {
+  res.sendFile(path.join(__dirname, 'files', "certificates", req.params.fileName))
+})
 app.use("*", async (_, res) => {
-  res.sendFile(path.join(__dirname, '/..', "index.html"));
+  const filePath = path.join(__dirname, "react", "index.html")
+  res.sendFile(filePath);
 });
 
 module.exports = app;

@@ -1,5 +1,15 @@
 .content {
-    width: 500px;
-    height: 500px;
-    background-color: red;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  &-title {
+    font-weight: 500px;
+    font-size: 2rem;
+  }
+
+
+  .block {
+    display: flex;
+  }
 }

@@ -2,7 +2,7 @@
 // organizationLink Course's author link
 // title Certificate name or about what you learned
 // educationPeriod: Period when you studied
-// filePath Required. Show path to file in backend
+// filePath Required. Show path to file in backend for front
 // key Is required used in controller to filter all list data
 // credentialID: If your certificate have unique ID
 // dateOfReceiving: When you was getting it
@@ -26,7 +26,7 @@ const certificationsListData = [
     organizationLink: 'https://www.wifi.at/start',
     title: "Teilnahmebestätigung",
     educationPeriod: "02.2023 - 05.2023",
-    filePath: "/files/TEILNAHMEBESTÄTIGUNG.pdf",
+    filePath: "/files/certificates/TEILNAHMEBESTATIGUNG.pdf",
     key: "GERMAN_B1",
     dateOfReceiving: "05.2023",
     expiredDate: "",

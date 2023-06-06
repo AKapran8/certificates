@@ -4,10 +4,11 @@ export interface ICertificate {
   title: string;
   filePath: string;
   key: string;
-  credentialID: string;
+  credentialID?: string;
   dateOfReceiving: string;
-  expiredDate: string;
+  expiredDate?: string;
   path: string;
+  educationPeriod?: string;
 }
 
 export interface INavbarCertificate {
