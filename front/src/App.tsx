@@ -8,12 +8,10 @@ import "./App.scss";
 import { ICertificate } from "./models/certificates.model";
 
 const App = () => {
-  const currentUrl: string = window.location.href;
-
   const [certificatesList, setCertificatesList] = useState<ICertificate[]>([]);
 
   useEffect(() => {
-    fetch(`${currentUrl}api/certificates`)
+    fetch(`https://andrii-kapran.cyclic.app/api/certificates`)
       .then((res) => res.json())
       .then((list: ICertificate[]) => setCertificatesList(list || []));
   }, []);

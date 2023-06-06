@@ -4,12 +4,11 @@ import { useParams } from "react-router-dom";
 import { ICertificate } from "../../models/certificates.model";
 
 const Content = () => {
-  const currentUrl: string = window.location.href;
   const { path } = useParams<{ path: string }>();
   const [certificate, setCertificate] = useState<ICertificate | null>(null);
 
   useEffect(() => {
-    fetch(`${currentUrl}/api/certificates/${path}`)
+    fetch(`https://andrii-kapran.cyclic.app/api/certificates/${path}`)
       .then((res) => res.json())
       .then((data: ICertificate) => setCertificate(data));
   }, [path]);
