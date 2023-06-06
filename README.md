@@ -2,8 +2,9 @@
  Last update: 06.06.2022
 
 # URL
- https://nice-plum-catfish-ring.cyclic.app
+https://andrii-kapran.cyclic.app
 
 # About
  Backend NodeJS  
- Frontend ReactJS
+ Frontend ReactJS  
+ NodeJS version 18.16.0
