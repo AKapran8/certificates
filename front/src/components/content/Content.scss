@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  &-title {
+    font-weight: 500px;
+    font-size: 2rem;
+  }
+
+
+  .block {
+    display: flex;
+  }
+}
