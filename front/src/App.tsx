@@ -11,6 +11,7 @@ const App = () => {
   const [certificatesList, setCertificatesList] = useState<ICertificate[]>([]);
 
   useEffect(() => {
+    console.log(`${process.env.API_URL}/certificates`)
     fetch(`https://andrii-kapran.cyclic.app/api/certificates`)
       .then((res) => res.json())
       .then((list: ICertificate[]) => setCertificatesList(list || []));

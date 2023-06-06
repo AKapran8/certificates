@@ -23,7 +23,7 @@ const Content = () => {
         <div>
           <iframe
             title={certificate.title}
-            src={`http://localhost:8080${certificate!.filePath}`}
+            src={`https://andrii-kapran.cyclic.app${certificate!.filePath}`}
             width="100%"
             height="600px"
           ></iframe>
