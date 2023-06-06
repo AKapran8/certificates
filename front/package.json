@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build --output-path ../back/react",
+    "build": "react-scripts build",
     "serve": "nodemon server.js",
     "start:server": "node server.js"
   },
