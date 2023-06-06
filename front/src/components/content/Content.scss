@@ -1,15 +1,30 @@
 .content {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   gap: 40px;
 
+
   &-title {
-    font-weight: 500px;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700px;
   }
 
+  &-description {
 
-  .block {
-    display: flex;
+    p {
+      margin: 0.8rem 0;
+    }
+
+    .organization a {
+      color: black;
+
+      &:hover {
+        color: rgb(15, 123, 123);
+        transition: .5s;
+      }
+    }
   }
+
 }
