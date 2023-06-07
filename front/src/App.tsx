@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Content from "./components/content/Content";
+import Certificate from "./components/Certificate/Certificate";
+import Project from "./components/Project/Project";
 import Home from "./components/Home";
 
 import "./App.scss";
-import { ICertificate } from "./models/certificates.model";
+import { ICertificate } from "./models/certificate.model";
 
 const App = () => {
   const [certificatesList, setCertificatesList] = useState<ICertificate[]>([]);
 
   useEffect(() => {
-    console.log(`${process.env.API_URL}/certificates`)
     fetch(`https://andrii-kapran.cyclic.app/api/certificates`)
       .then((res) => res.json())
       .then((list: ICertificate[]) => setCertificatesList(list || []));
@@ -24,7 +24,8 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/certificates/:path" element={<Content />} />
+          <Route path="/certificates/:path" element={<Certificate />} />
+          <Route path="/projects/:key" element={<Project />} />
         </Routes>
       </div>
     </Router>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { ICertificate } from "../../models/certificates.model";
+import { ICertificate } from "../../models/certificate.model";
 
-import "./Content.scss";
+import "./Certificate.scss";
 
-const Content = () => {
+const Certificate = () => {
   const { path } = useParams<{ path: string }>();
   const [certificate, setCertificate] = useState<ICertificate | null>(null);
 
@@ -20,8 +20,8 @@ const Content = () => {
   }
 
   return (
-    <div className="content">
-      <div className="content-pdf">
+    <div className="certificate">
+      <div className="certificate-pdf">
         <iframe
           title={certificate.title}
           src={`https://andrii-kapran.cyclic.app${certificate!.filePath}`}
@@ -29,8 +29,8 @@ const Content = () => {
         ></iframe>
       </div>
 
-      <div className="content-description">
-        <h3 className="content-title">{certificate!.title}</h3>
+      <div className="certificate-description">
+        <h3 className="certificate-title">{certificate!.title}</h3>
         {certificate?.organization && (
           <p className="organization">
             <a href={certificate.organizationLink}>
@@ -64,4 +64,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Certificate;

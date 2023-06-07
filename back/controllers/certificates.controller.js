@@ -1,4 +1,4 @@
-const { list } = require("./../data/certifications");
+const { list } = require("../data/certificates");
 
 const getCertificates = async (_, res) => {
   res.send(list);

@@ -9,7 +9,7 @@
 // expiredDate: if current certificate have expired date, please write it
 // path current item backend endpoint
 
-const certificationsListData = [
+const certificatesListData = [
   {
     organization: "Udemy (author: Shawn Foster)",
     organizationLink: 'https://www.udemy.com/user/shawn-foster-3/',
@@ -94,4 +94,4 @@ const certificationsListData = [
   },
 ]
 
-module.exports = { list: certificationsListData };
+module.exports = { list: certificatesListData };
