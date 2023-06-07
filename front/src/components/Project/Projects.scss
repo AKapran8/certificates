@@ -1,0 +1,20 @@
+.project {
+    margin-top: 40px;
+
+    .technologies-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin-right: 1.2rem;
+            padding: 8px;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

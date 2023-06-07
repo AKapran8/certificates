@@ -24,14 +24,7 @@ app.use((_, res, next) => {
 
 
 app.use("/api/utils", utilsRouters);
-
-// Certificates 
 app.use("/api/certificates", certificatesRouters);
-app.use("/files/certificates/:fileName", (req, res) => {
-  res.sendFile(path.join(__dirname, 'files', "certificates", req.params.fileName))
-});
-
-// Projects and technologies
 app.use("/api/projects", projectsRouters);
 
 // Front don't touch

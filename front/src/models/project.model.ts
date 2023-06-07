@@ -5,7 +5,7 @@ export interface IProject {
   imagesPaths: string[];
   linkToCode: string;
   nodeVersion: string;
-  technologies: { id: number; text: string }[];
+  technologies: { id: number; text:  string }[];
 }
 
 export interface IProjectsResponse {
@@ -28,7 +28,7 @@ export interface INavbarProject {
   path: string;
 }
 
-interface ITechnology {
+export interface ITechnology {
   id: number;
-  text: string;
+  text:  string;
 }

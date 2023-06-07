@@ -1,9 +1,5 @@
 const { list } = require("../data/certificates");
 
-const getCertificates = async (_, res) => {
-  res.send(list);
-}
-
 const getCertificateByKey = async (req, res) => {
   const key = req.params.key;
 
@@ -16,6 +12,5 @@ const getCertificateByKey = async (req, res) => {
 }
 
 module.exports = {
-  getCertificates,
   getCertificateByKey,
 };

@@ -43,7 +43,7 @@ const Navbar = ({ certificates, projects }: INavbarProp) => {
 
       <div className="navbar-container">
         <h1 className="navbar-title">
-          <Link to="/">Projects</Link>
+          <Link to="/projects">Projects</Link>
         </h1>
         <nav>
           <ul>

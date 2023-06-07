@@ -1,7 +1,7 @@
 const { list } = require("./../data/projects");
 
 const getProjects = async (_, res) => {
-    res.status(200).json({ message: "Success" }, list);
+    res.status(200).json({ message: "Success" , list});
 }
 
 const getProjectByKey = async (req, res) => {
