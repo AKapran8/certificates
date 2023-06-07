@@ -1,16 +1,17 @@
 // key. Required filed, must be unique
+// path path current item backend endpoint
 // title. Required. Project name
 // description. About project. Which technologies I use
 // imagesPaths. Links to project's photos. For every project create new folder
 // linkToCode. Link to GitHub, where people can see the project code
 // nodeVersion. Now required if project don't use NodeJS
 // technologies. Choose from existed technologies, or add new previously in TG
-
-const { TG } = require("./utils/technologies")
+const { TECHNOLOGIES_CONFIG: TG } = require("./utils/technologies")
 
 const certificatesListData = [
   {
     key: "calculator",
+    path: 'projects/calculator',
     title: "Calculator",
     description: "In current project I use these technologies: ReactJS, TypeScript, TSX, JavaScript, TSX. For styling I use styled-components package",
     imagesPaths: ['/files/projects/calculator/calculator.png'],

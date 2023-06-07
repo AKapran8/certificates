@@ -3,10 +3,9 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 
-const certificatesRouters = require("./routers/certificates");
-const projectsRouters = require("./routers/projects");
-
-const {TG} = require("./data/utils/technologies")
+const certificatesRouters = require("./routers/certificates.router");
+const projectsRouters = require("./routers/projects.router");
+const utilsRouters = require("./routers/utils.router");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +22,9 @@ app.use((_, res, next) => {
   next();
 });
 
+
+app.use("/api/utils", utilsRouters);
+
 // Certificates 
 app.use("/api/certificates", certificatesRouters);
 app.use("/files/certificates/:fileName", (req, res) => {
@@ -31,9 +33,6 @@ app.use("/files/certificates/:fileName", (req, res) => {
 
 // Projects and technologies
 app.use("/api/projects", projectsRouters);
-app.use("/api/technologies", (_, res) => {
-  res.status(200).json({message: "Success", technologies: TG })
-});
 
 // Front don't touch
 app.use("*", async (_, res) => {

@@ -24,4 +24,4 @@ const TECHNOLOGIES_CONFIG = {
     OOP: { id: 23, text: "OOP" }
 }
 
-module.exports = { TG: TECHNOLOGIES_CONFIG };
+module.exports = { TECHNOLOGIES_CONFIG };

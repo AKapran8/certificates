@@ -10,7 +10,7 @@ const Certificate = () => {
   const [certificate, setCertificate] = useState<ICertificate | null>(null);
 
   useEffect(() => {
-    fetch(`https://andrii-kapran.cyclic.app/api/certificates/${path}`)
+    fetch(`http://localhost:8080/api/certificates/${path}`)
       .then((res) => res.json())
       .then((data: ICertificateResponse) => setCertificate(data.certificate));
   }, [path]);
@@ -24,7 +24,7 @@ const Certificate = () => {
       <div className="certificate-pdf">
         <iframe
           title={certificate.title}
-          src={`https://andrii-kapran.cyclic.app${certificate!.filePath}`}
+          src={`http://localhost:8080${certificate!.filePath}`}
           height="600px"
         ></iframe>
       </div>

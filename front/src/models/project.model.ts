@@ -23,6 +23,11 @@ export interface ITechnologiesResponse {
   technologies: {[key: string]: ITechnology}[] | [];
 }
 
+export interface INavbarProject {
+  title: string;
+  path: string;
+}
+
 interface ITechnology {
   id: number;
   text: string;

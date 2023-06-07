@@ -2,13 +2,15 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import "./Navbar.scss";
-import { ICertificate } from "../../models/certificate.model";
+import { INavbarCertificate } from "../../models/certificate.model";
+import { INavbarProject } from "../../models/project.model";
 
 interface INavbarProp {
-  list: ICertificate[];
+  certificates: INavbarCertificate[];
+  projects: INavbarProject[];
 }
 
-const Navbar = ({ list }: INavbarProp) => {
+const Navbar = ({ certificates, projects }: INavbarProp) => {
   const location = useLocation();
   const currentURL = location.pathname;
 
@@ -20,16 +22,43 @@ const Navbar = ({ list }: INavbarProp) => {
         </h1>
         <nav>
           <ul>
-            {list.map((certificate, index) => (
+            {certificates.map((c, index) => (
               <li
                 className={
-                  `/${certificate.path}` === currentURL
+                  `/${c.path}` === currentURL
                     ? "navbar-item item-active"
                     : "navbar-item"
                 }
-                key={certificate.path}
+                key={c.path}
               >
-                <Link to={certificate.path}>{index +1}. {certificate.title}</Link>
+                <Link to={c.path}>
+                  {index + 1}. {c.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+
+      <div className="navbar-container">
+        <h1 className="navbar-title">
+          <Link to="/">Projects</Link>
+        </h1>
+        <nav>
+          <ul>
+            {projects.map((p, index) => (
+              <li
+                className={
+                  `/${p.path}` === currentURL
+                    ? "navbar-item item-active"
+                    : "navbar-item"
+                }
+                key={p.path}
+              >
+                <Link to={p.path}>
+                  {index + 1}. {p.title}
+                </Link>
               </li>
             ))}
           </ul>

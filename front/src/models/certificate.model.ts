@@ -12,9 +12,8 @@ export interface ICertificate {
 }
 
 export interface INavbarCertificate {
-  text: string;
-  url: string;
-  key: string;
+  title: string;
+  path: string;
 }
 
 export interface ICertificateResponse {
