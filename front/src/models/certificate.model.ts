@@ -16,3 +16,8 @@ export interface INavbarCertificate {
   url: string;
   key: string;
 }
+
+export interface ICertificateResponse {
+  message: string;
+  certificate: ICertificate
+}

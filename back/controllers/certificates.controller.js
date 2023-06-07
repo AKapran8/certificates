@@ -4,54 +4,18 @@ const getCertificates = async (_, res) => {
   res.send(list);
 }
 
-const getBootstrapCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'BOOTSTRAP');
+const getCertificateByKey = async (req, res) => {
+  const key = req.params.key;
 
-  res.send(certificate);
-};
+  if (!key) return res.status(500).json('Internal Server Error');
 
-const getLogosCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'LOGOS');
+  const certificate = list.find(c => c.key === key);
+  if (!certificate) return res.status(404).json({message: `Certificate ${key} not found. Try another one`})
 
-  res.send(certificate);
-};
-
-const getPolytechnicCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'POLYTECHNIC');
-
-  res.send(certificate);
-};
-
-const getGermanA2Certificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'GERMAN_A2');
-
-  res.send(certificate);
-};
-
-const getMEANCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'MEAN');
-
-  res.send(certificate);
-};
-
-const getB1TeilnahmebestatigungCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'GERMAN_B1');
-
-  res.send(certificate);
-}
-const getCalculatorCertificate = async (_, res) => {
-  const certificate = list.find(el => el.key === 'REACT_CALCULATOR');
-
-  res.send(certificate);
+  res.status(200).json({ message: 'Success', project: certificate })
 }
 
 module.exports = {
   getCertificates,
-  getBootstrapCertificate,
-  getLogosCertificate,
-  getPolytechnicCertificate,
-  getGermanA2Certificate,
-  getMEANCertificate,
-  getB1TeilnahmebestatigungCertificate,
-  getCalculatorCertificate,
+  getCertificateByKey,
 };

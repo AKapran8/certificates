@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { ICertificate } from "../../models/certificate.model";
+import { ICertificate, ICertificateResponse } from "../../models/certificate.model";
 
 import "./Certificate.scss";
 
@@ -12,7 +12,7 @@ const Certificate = () => {
   useEffect(() => {
     fetch(`https://andrii-kapran.cyclic.app/api/certificates/${path}`)
       .then((res) => res.json())
-      .then((data: ICertificate) => setCertificate(data));
+      .then((data: ICertificateResponse) => setCertificate(data.certificate));
   }, [path]);
 
   if (!certificate) {

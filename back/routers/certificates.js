@@ -4,12 +4,6 @@ const router = express.Router();
 const certificatesController = require("../controllers/certificates.controller");
 
 router.get("/", certificatesController.getCertificates);
-router.get("/bootstrap", certificatesController.getBootstrapCertificate);
-router.get("/logos", certificatesController.getLogosCertificate);
-router.get("/polytechnic", certificatesController.getPolytechnicCertificate);
-router.get("/german-a2", certificatesController.getGermanA2Certificate);
-router.get("/mean", certificatesController.getMEANCertificate);
-router.get("/german-b1", certificatesController.getB1TeilnahmebestatigungCertificate);
-router.get("/react-calculator", certificatesController.getCalculatorCertificate);
+router.get("/:key", certificatesController.getCertificateByKey);
 
 module.exports = router;
