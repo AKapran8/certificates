@@ -9,7 +9,7 @@
 }
 
 .slide {
-  height: 60vh;
+  height: 38vh;
   border-radius: 20px;
   margin: 10px;
   cursor: pointer;
@@ -23,4 +23,7 @@
 
 .active {
   flex: 10;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

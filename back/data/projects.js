@@ -10,6 +10,16 @@ const { TECHNOLOGIES_CONFIG: TG } = require("./utils/technologies")
 
 const certificatesListData = [
   {
+    key: "med-purchases",
+    path: 'projects/med-purchases',
+    title: "Med Purchases",
+    description: "Work with Angular with PrimeNG",
+    imagesPaths: ['/files/projects/med-purchases/home-page.png', '/files/projects/med-purchases/search.png', '/files/projects/med-purchases/search-and-filter.png', '/files/projects/med-purchases/filter-and-sort.png', '/files/projects/med-purchases/hide-columns.png'],
+    linkToCode: 'https://github.com/AKapran8/Medical-Purchases',
+    nodeVersion: '18.16.0',
+    technologies: [TG.Angular, TG.PrimeNG, TG.TypeScript, TG.HTML5, TG["SASS/SCSS"], TG.RxJS]
+  },
+  {
     key: "calculator",
     path: 'projects/calculator',
     title: "React Calculator",

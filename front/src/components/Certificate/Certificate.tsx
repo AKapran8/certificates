@@ -33,7 +33,7 @@ const Certificate = () => {
         <h3 className="certificate-title">{certificate!.title}</h3>
         {certificate?.organization && (
           <p className="organization">
-            <a href={certificate.organizationLink}>
+            <a href={certificate.organizationLink} target="blank">
               Organization <strong>{certificate?.organization}</strong>
             </a>
           </p>

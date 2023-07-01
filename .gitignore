@@ -10,10 +10,10 @@
 /package-lock.json
 /front/package-lock.json
 /back/files/.DS_Store
+/back/files/.DS_Store
 # testing
 /coverage
 /front/coverage
-/back/files/.DS_Store
 # misc
 ./files/.DS_Store
 .DS_Store

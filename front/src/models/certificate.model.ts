@@ -11,11 +11,6 @@ export interface ICertificate {
   educationPeriod?: string;
 }
 
-export interface INavbarCertificate {
-  title: string;
-  path: string;
-}
-
 export interface ICertificateResponse {
   message: string;
   certificate: ICertificate
