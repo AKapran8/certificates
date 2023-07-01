@@ -6,34 +6,25 @@
 
   &-container {
     padding: 2rem;
-    color: #fff;
   }
 
   &-title {
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-
-    > a {
-      color: #fff;
-    }
   }
 
   &-item {
     margin: 8px 0;
 
-    > a {
-      color: #fff;
-
-      &:hover {
-        color: aqua;
-      }
+    > a:hover {
+      color: aqua !important;
     }
   }
 
   .item-active {
     > a {
-      color: aqua;
+      color: rgb(4, 252, 252);
     }
   }
 }

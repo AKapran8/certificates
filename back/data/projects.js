@@ -12,12 +12,12 @@ const certificatesListData = [
   {
     key: "calculator",
     path: 'projects/calculator',
-    title: "Calculator",
-    description: "In current project I use these technologies: ReactJS, TypeScript, TSX, JavaScript, TSX. For styling I use styled-components package",
-    imagesPaths: ['/files/projects/calculator/calculator.png'],
+    title: "React Calculator",
+    description: "In current project I use these technologies: ReactJS, TypeScript, TSX, JavaScript, JSX. For styling I use styled-components package",
+    imagesPaths: ['/files/projects/calculator/empty.png', '/files/projects/calculator/plus.png', '/files/projects/calculator/minus.png'],
     linkToCode: 'https://github.com/AKapran8/calculator',
     nodeVersion: '18.14.0',
-    technologies: [TG.ReactJS, TG.TypeScript, TG.TSX, TG.JSX, TG.JavaScript]
+    technologies: [TG.ReactJS, TG.TypeScript, TG.TSX, TG.JSX, TG.JavaScript, TG.HTML5, TG["SASS/SCSS"]]
   },
 ]
 

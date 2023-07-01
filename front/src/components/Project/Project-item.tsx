@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import Slider from "./slider/Slider";
+
 import { IProject, IProjectByKeyResponse } from "../../models/project.model";
 
-import "./Projects.scss";
+import "./Project-item.scss";
 
 const ProjectItem = () => {
   const { key } = useParams<{ key: string }>();
@@ -21,14 +23,25 @@ const ProjectItem = () => {
 
   return (
     <div className="project">
-      <h1>{project.title}</h1>
-
-      {project.imagesPaths?.length &&
-        project.imagesPaths.map((path) => (
-          <div key={path}>
-            <img src={`http://localhost:8080${path}`} width="100" alt="" />
-          </div>
+      <h1 className="project-title">{project.title}</h1>
+      <p className="project-description">{project.description}</p>
+      <p className="project-link">
+        <a href={project.linkToCode} target="blank">
+          View the Code on GitHub
+        </a>
+      </p>
+      <p>
+        Technologies:&nbsp;
+        {project.technologies.map((t, i) => (
+          <span key={t.id}>
+            {t.text}
+            {i + 1 === project.technologies.length
+              ? "."
+              : ", "}
+          </span>
         ))}
+      </p>
+      {project.imagesPaths && <Slider imagesPaths={project.imagesPaths} />}
     </div>
   );
 };

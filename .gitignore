@@ -9,6 +9,7 @@
 /front.pnp.js
 /package-lock.json
 /front/package-lock.json
+/back/files/.DS_Store
 # testing
 /coverage
 /front/coverage
