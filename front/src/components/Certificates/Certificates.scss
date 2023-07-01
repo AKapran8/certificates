@@ -1,0 +1,36 @@
+.certificates {
+  padding: 2rem;
+
+
+  &-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &-item {
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333 !important;
+    cursor: pointer;
+  }
+
+  &-item:hover {
+    background-color: #e0e0e0;
+  }
+
+  &-item a {
+    color: #333 !important;
+    text-decoration: none;
+  }
+
+  &-item a:hover {
+    text-decoration: underline;
+  }
+}

@@ -15,3 +15,8 @@ export interface ICertificateResponse {
   message: string;
   certificate: ICertificate
 }
+
+export interface ICertificatesListResponse {
+  message: string;
+  list: ICertificate[];
+}

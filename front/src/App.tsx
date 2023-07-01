@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import "./App.scss";
 import { INavbarResponse, INavbarPart } from "./models/navbar.model";
 import ProjectItem from "./components/Project/Project-item";
+import Certificates from "./components/Certificates/Certificates";
 
 const App = () => {
   const [navbarData, setNavbarData] = useState<INavbarPart[]>([]);
@@ -25,6 +26,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/certificates/:path" element={<Certificate />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/projects/:key" element={<ProjectItem />} />

@@ -12,7 +12,6 @@ const Navbar = ({ navbarData }: INavbarProp) => {
   const location = useLocation();
   const currentURL = location.pathname;
 
-  console.log(navbarData);
   return (
     <div className="navbar">
       {navbarData.map((element) => (
