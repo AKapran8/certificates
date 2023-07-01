@@ -11,8 +11,12 @@ export interface ICertificate {
   educationPeriod?: string;
 }
 
-export interface INavbarCertificate {
-  text: string;
-  url: string;
-  key: string;
+export interface ICertificateResponse {
+  message: string;
+  certificate: ICertificate
+}
+
+export interface ICertificatesListResponse {
+  message: string;
+  list: ICertificate[];
 }

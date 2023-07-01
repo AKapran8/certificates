@@ -1,0 +1,38 @@
+.projects {
+  background-color: rgb(27, 23, 23);
+  width: 100%;
+  padding-top: 40px;
+  padding-right: 24px;
+  color: #fff;
+
+  .technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 1.2rem;
+      padding: 8px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.block {
+  width: 80vh;
+  height: 50px;
+  background-color: red;
+  display: flex;
+  gap: 16px;
+}
+
+.img {
+  display: inline-block;
+  width: 50px;
+  border-radius: 50%;
+}

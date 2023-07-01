@@ -1,0 +1,20 @@
+.project {
+  background-color: rgb(27, 23, 23);
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 24px;
+
+  &-title {
+    font-size: 40px;
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 24px;
+
+    a:hover {
+      color: aqua !important;
+      transition: 0.3s;
+    }
+  }
+}

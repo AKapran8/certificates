@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.slides {
+  width: 100vh;
+  display: flex;
+}
+
+.slide {
+  height: 38vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.active {
+  flex: 10;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

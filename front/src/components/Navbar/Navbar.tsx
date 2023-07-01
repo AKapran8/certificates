@@ -2,39 +2,45 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import "./Navbar.scss";
-import { ICertificate } from "../../models/certificates.model";
+import { INavbarPart } from "../../models/navbar.model";
 
 interface INavbarProp {
-  list: ICertificate[];
+  navbarData: INavbarPart[];
 }
 
-const Navbar = ({ list }: INavbarProp) => {
+const Navbar = ({ navbarData }: INavbarProp) => {
   const location = useLocation();
   const currentURL = location.pathname;
 
   return (
     <div className="navbar">
-      <div className="navbar-container">
-        <h1 className="navbar-title">
-          <Link to="/">Certificates</Link>
-        </h1>
-        <nav>
-          <ul>
-            {list.map((certificate, index) => (
-              <li
-                className={
-                  `/${certificate.path}` === currentURL
-                    ? "navbar-item item-active"
-                    : "navbar-item"
-                }
-                key={certificate.path}
-              >
-                <Link to={certificate.path}>{index +1}. {certificate.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      {navbarData.map((element) => (
+        <div className="navbar-container" key={element.title}>
+          <h1
+            className={`navbar-title ${
+              currentURL.includes(element.title) ? "item-active" : ""
+            }`}
+          >
+            <Link to={`/${element.title}`}>{element.title}</Link>
+          </h1>
+          <nav>
+            <ul>
+              {element.value.map((c, index) => (
+                <li
+                  className={`navbar-item ${
+                    `/${c.path}` === currentURL ? "item-active" : ""
+                  }`}
+                  key={c.path}
+                >
+                  <Link to={c.path}>
+                    {index + 1}. {c.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      ))}
     </div>
   );
 };
