@@ -13,7 +13,7 @@ const certificatesListData = [
     key: "med-purchases",
     path: 'projects/med-purchases',
     title: "Med Purchases",
-    description: "Work with Angular with PrimeNG",
+    description: "Work with Angular and PrimeNG like UI library",
     imagesPaths: ['/files/projects/med-purchases/home-page.png', '/files/projects/med-purchases/search.png', '/files/projects/med-purchases/search-and-filter.png', '/files/projects/med-purchases/filter-and-sort.png', '/files/projects/med-purchases/hide-columns.png'],
     linkToCode: 'https://github.com/AKapran8/Medical-Purchases',
     nodeVersion: '18.16.0',

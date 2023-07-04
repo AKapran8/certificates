@@ -2,8 +2,9 @@
   background-color: rgb(27, 23, 23);
   width: 100%;
   padding-top: 40px;
-  padding-right: 24px;
   color: #fff;
+  max-width: 100vh;
+  margin: 0 5vh;
 
   .technologies-list {
     display: flex;
@@ -26,13 +27,27 @@
 .block {
   width: 80vh;
   height: 50px;
-  background-color: red;
   display: flex;
   gap: 16px;
+  margin: 1rem 0rem;
+
+  p {
+    margin: 0.5rem 0 0 0;
+  }
+
+  &:hover {
+    color: aqua !important;
+    transition: 1s;
+  }
 }
 
 .img {
   display: inline-block;
   width: 50px;
-  border-radius: 50%;
+  border-radius: 75%;
+}
+
+
+.loading, .empty {
+  margin-top: 1rem;
 }
