@@ -25,11 +25,11 @@ const App = () => {
         <Navbar navbarData={navbarData} />
 
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/certificates/:path" element={<Certificate />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/projects/:key" element={<ProjectItem />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </Router>
