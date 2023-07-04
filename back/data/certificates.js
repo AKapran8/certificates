@@ -72,7 +72,7 @@ const certificatesListData = [
     organization: "Logos IT Academy",
     organizationLink: "https://lviv.logos-academy.com",
     title: "Frontend Development",
-    educationPeriod: "08.2020 - 04.2021",
+    educationPeriod: "07.2020 - 04.2021",
     filePath: "/files/certificates/LOGOS_IT_ACADEMY_FRONT.pdf",
     key: "logos",
     credentialID: "",
