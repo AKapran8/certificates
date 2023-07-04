@@ -65,13 +65,9 @@ const Project = () => {
 
       {projects.length > 0 ? (
         filteredProjects.length > 0 ? (
-          filteredProjects.map((p) => (
+          filteredProjects.map((p, index) => (
             <a className="block" href={`projects/${p.key}`} key={p.key}>
-              <img
-                src={`http://localhost:8080${p.imagesPaths[0]}`}
-                alt={p.title}
-                className="img"
-              />
+              <p className="project-number">{index + 1}</p>
               <div className="project-description">
                 <p>{p.title}</p>
                 <p>

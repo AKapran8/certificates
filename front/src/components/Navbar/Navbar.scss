@@ -5,7 +5,11 @@
   background-color: #292b2c;
 
   &-container {
-    padding: 2rem;
+    padding: 1rem;
+
+    &:last-child {
+      padding-top: 0;
+    }
   }
 
   &-title {
